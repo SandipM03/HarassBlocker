@@ -1,7 +1,8 @@
-##YouTubeHarassBlocker
+# YouTubeHarassBlocker
+
 YouTubeHarassBlocker is a Chrome extension designed to combat online harassment by filtering out toxic comments commonly found in YouTube video comment sections. This tool enhances user experience by ensuring a safer, more positive environment.
 
-##Features:
+# Features:
 
 Automatically detects and hides harassing comments based on predefined keywords.
 
@@ -11,7 +12,7 @@ Allows users to customize the list of blocked keywords.
 
 Easy to install and use.
 
-##Get Started:
+# Get Started:
 
 Clone the repository.
 

@@ -1,0 +1,172 @@
+/* Reset and Base Styles */
+:root {
+    --primary-color: #9D040E;
+    --text-color: #000000;
+    --background-opacity-high: rgba(255, 255, 255, 0.9);
+    --background-opacity-low: rgba(255, 255, 255, 0.8);
+    --border-radius: 5px;
+    --transition-duration: 0.5s;
+  }
+  
+  /* Main Container */
+  body {
+    background: url('grad.png') no-repeat center center;
+    background-size: cover;
+    min-height: 345px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Avenir Next Condensed', Helvetica, sans-serif;
+    color: var(--text-color);
+    box-sizing: border-box;
+  }
+  
+  /* Font Loading */
+  @font-face {
+    font-family: 'Avenir Next Condensed';
+    src: url('Avenir Next Condensed.ttc') format('truetype');
+    font-display: swap;
+  }
+  
+  /* Logo Container */
+  .top {
+    background-color: var(--background-opacity-high);
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0.5rem 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top img {
+    height: 70px;
+    width: auto;
+    margin: 0.625rem 0;
+    object-fit: contain;
+  }
+  
+  /* Options Container */
+  .options {
+    background-color: var(--background-opacity-low);
+    padding: 1rem;
+    margin: 0 0.5rem 0.5rem;
+    min-height: 224px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  }
+  
+  /* Typography */
+  h2 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  /* Form Styles */
+  form {
+    text-align: left;
+    padding: 0 2.5rem;
+  }
+  
+  /* Checkbox Container */
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Custom Checkbox Styling */
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+    margin-right: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+  }
+  
+  input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 0.875rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Submit Button */
+  #submitB {
+    display: block;
+    width: auto;
+    min-width: 100px;
+    margin: 1.25rem auto 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-duration) ease-in-out;
+  }
+  
+  #submitB:hover {
+    background-color: var(--text-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #submitB:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  
+  /* Other Input Field */
+  #otherInput {
+    width: 100%;
+    max-width: 155px;
+    margin: 0.5rem 0 0 1.25rem;
+    padding: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 360px) {
+    body {
+      padding: 0.5rem;
+    }
+    
+    form {
+      padding: 0 1.5rem;
+    }
+    
+    .options {
+      padding: 0.75rem;
+    }
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+    }
+  }
+  
+  /* Focus States */
+  input[type="checkbox"]:focus,
+  #submitB:focus,
+  #otherInput:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
